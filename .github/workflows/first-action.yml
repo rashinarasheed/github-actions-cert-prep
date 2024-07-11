@@ -6,7 +6,9 @@ jobs:
   runs-on: ubuntu-latest
   steps:
    - name: Print greeting
-     run: echo "Hello Worl!"
+     run: |
+          echo "Hello Worl!"
+          echo "I told you so"
    - name: Print bye message
      run: echo "That's a bye!"
 
