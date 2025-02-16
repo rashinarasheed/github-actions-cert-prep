@@ -1,0 +1,32 @@
+name: Dependent Jobs Workflow
+
+on:
+    push:
+        branches:
+            -main
+            
+jobs:
+    job1: 
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout repository
+              uses: actions/checkout@v4
+
+            - name: Run Job 1
+              uses: echo "this is job 1"
+
+
+
+    job2: 
+        needs: job1
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run job 2
+              run: echo "This is job 2, which depends on job 1"
+
+    job3:
+        needs: [job1,job2]
+        runs-on: ubuntu-latest
+        steps:
+            - name: Run job3
+              run: echo "This is job 3, which depends on job 1 and job 2"  
