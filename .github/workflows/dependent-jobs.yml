@@ -4,6 +4,7 @@ on:
     push:
         branches:
             -main
+    workflow_dispatch:
             
 jobs:
     job1: 
@@ -14,9 +15,6 @@ jobs:
 
             - name: Run Job 1
               run: echo "this is job 1"
-
-
-
     job2: 
         needs: job1
         runs-on: ubuntu-latest
