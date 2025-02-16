@@ -1,3 +1,4 @@
-# Sample Workflow files for GitHub Actions Certification
+# Sample Workflow Files for GitHub Actions Certification Prep
 
-This repo contains sample workflow files to demonstrate GitHub Actions
+This repo contains sample workflow files for demonstration in the GitHub Actions Certifications preparation.
+
