@@ -16,4 +16,4 @@ jobs:
         uses: actions/checkout@v4 
 
       - name: Run Job 1
-        run: echo "this workflow is triggered on push, PR,schedule,or manual trigger"
+        run: echo "this workflow is triggered on push, PR,schedule,or manual trigger this is a sample job for demo"
