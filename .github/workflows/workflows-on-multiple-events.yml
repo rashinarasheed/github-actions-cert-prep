@@ -1,0 +1,19 @@
+name: Running workflows on multiple events
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  schedule:
+    - cron: '2 * * * *'
+jobs:
+  my_job1: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4 
+
+      - name: Run Job 1
+        run: echo "this workflow is triggered on push, PR,schedule,or manual trigger"
