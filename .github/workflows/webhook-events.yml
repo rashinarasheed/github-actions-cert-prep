@@ -1,7 +1,7 @@
 name: Webhook Triggered Workflow
 on:
   repository_dispatch:
-    types: ['custom-webhook']
+    types: [ custom-webhook ]
 
 jobs:
   run-on-webhook:
