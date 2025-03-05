@@ -2,9 +2,9 @@ name: Running workflows on multiple events
 # controls when the workflow will run
 on:
 # here the event trigger is push
-  push:
-    branches:
-      - main
+  #push:
+    #branches:
+      #- main
 # workflow_dispatch is a feature to manually trigger the workflow
   workflow_dispatch:
   pull_request:
