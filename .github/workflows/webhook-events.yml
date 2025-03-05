@@ -2,7 +2,7 @@ name: Webhook Triggered Workflow
 #'repository_dispatch' event in GitHub Actions allow external services, APIs, or custom scripts to trigger a GitHub Actions workflow in a repository.
 on:
     repository_dispatch:
-        types: [custom-webhook]
+        types: [custom_webhook]
 
 jobs:
     run-on-webhook:
