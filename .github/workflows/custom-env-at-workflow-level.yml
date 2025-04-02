@@ -1,0 +1,14 @@
+name: Custom environment variable at workflow level
+on: push
+env:
+    GLOBAL_ENV: "HELLO FROM WORKFLOW LEVEL"
+
+jobs:
+    job_1:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Show global environment variable
+              run: echo "Workflow variable ${{env.GLOBAL_ENV}}"
+
+
+              

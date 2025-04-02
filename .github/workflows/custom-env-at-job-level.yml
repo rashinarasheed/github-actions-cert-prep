@@ -1,0 +1,11 @@
+name: custom env at job level
+on: [push, pull_request]
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    env:
+      MY_CUSTOM_ENV_VAR: "hello from job level"
+    steps:
+      - name: Print custom env var
+        run: echo "MY_CUSTOM_ENV_VAR is $MY_CUSTOM_ENV_VAR"
+
