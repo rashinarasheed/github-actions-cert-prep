@@ -5,7 +5,8 @@ on:
       - main
 
 jobs: 
-  install_dependencies
+  install_dependencies:
+    name: Install Dependencies  
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
