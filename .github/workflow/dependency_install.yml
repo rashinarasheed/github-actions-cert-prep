@@ -1,0 +1,17 @@
+name: dependency_install_workflow
+on:
+  repository_dispatch:
+    types: [install_dependencies]
+
+jobs: 
+  install_dependencies
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          echo "Installing dependencies..."
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
